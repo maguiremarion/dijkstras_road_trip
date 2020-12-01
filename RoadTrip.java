@@ -64,15 +64,15 @@ public class RoadTrip {
 		try(BufferedReader br = Files.newBufferedReader(Path.of(args[0]), StandardCharsets.UTF_8)){
 			while(br.ready()) {
 				String[] temp = (br.readLine()).split(",");
-            	map.put(temp[0], temp[1]);
-        	}
+            			map.put(temp[0], temp[1]);
+        		}
 		}
        	
 		try(BufferedReader br = Files.newBufferedReader(Path.of(args[1]), StandardCharsets.UTF_8)){
 			while(br.ready()) {
 				String[] temp = (br.readLine()).split(",");
 				UG.addEdge(temp[0], temp[1], Integer.parseInt(temp[2]));
-        	}
+        		}
 		}
 
 		 Scanner input = new Scanner(System.in); 
